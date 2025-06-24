@@ -86,12 +86,19 @@ button {
 }
 
 .icon {
+  display: flex;
+  justify-content:center;
+  align-items: center;
   width: 28px;
   height: 28px;
   padding: var(--padding-s);
   border-radius: 8px;
   background-color: var(--white);
   box-shadow: var(--shadow-icon);
+}
+
+.icon svg {
+  stroke: var(--black);
 }
 
 .main {
@@ -198,6 +205,20 @@ button {
   .brand {
     max-width: 220px;
   }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon:hover {
+  background-color: var(--base);
+}
+
+  .icon:hover svg {
+    stroke: var(--shadow);
+  }
+
   .main {
     flex-direction: row;
     padding: 0 4rem;
@@ -223,8 +244,5 @@ button {
     align-self: flex-start;
     font-size: 1.3rem;
   }
-  .icon {
-    width: 42px;
-    height: 42px;
-  }
+
 }
