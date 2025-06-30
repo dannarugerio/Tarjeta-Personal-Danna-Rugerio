@@ -35,6 +35,15 @@ Para usar variables en las propiedades de código usamos la "función" llamada v
   --font-size-n: 1rem; 
 }
 
+body.dark {
+  /* Scheme Dark Mode */
+  --base: #F9D6C8;
+  --highlight:#F4BCA4;
+  --shadow:#FAEFEB;
+  --white:#4F3D36; 
+  --black:#FBE4DA;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,8 +70,11 @@ a {
   display: block;
 }
 
-button {
+button { 
+  padding: 0.5rem;
   border: none;
+  background-color:var(--base);
+  box-shadow: var(--shadow-icon);
 }
 
 .card { 
@@ -148,6 +160,9 @@ button {
   color: var(--black);
 }
 
+main a svg {
+  stroke:var(--black);
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -245,4 +260,7 @@ button {
     font-size: 1.3rem;
   }
 
+  .main a:hover {
+    background-color:var(--white);
+  }
 }
